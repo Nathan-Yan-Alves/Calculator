@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "Digital";
+    src: url("./fonts/digital-7.ttf");
+    src: url("./fonts/digital-7-webfont.woff") format("woff");
+    src: url("./fonts/digital-7-webfont.woff2") format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0000b5;
+}
+
+.container {
+    max-width: 45rem;
+    height: 520px;
+    padding: 20px;
+    margin: 5rem;
+
+    border: 3px solid white;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+
+    background-color: #b8b1b0;
+
+    display: grid;
+    grid-template: repeat(4, 60px) / 60px 1fr 60px;
+    grid-template-areas:
+        "display display display"
+        "adv cons bas"
+        "adv inter bas"
+        "adv inter bas"
+        "adv num bas";
+
+    gap: 10px;
+}
+
+.display {
+    grid-area: display;
+    width: 100%;
+
+    border: 1px solid black;
+
+    padding: 10px;
+    padding-bottom: 0;
+
+    font-family: Digital;
+
+    font-size: 3.8rem;
+    color: black;
+
+    text-align: end;
+
+    display: flex;
+    flex-shrink: 1;
+}
+
+.display::placeholder {
+    color: black;
+}
+
+#display-2 {
+    font-size: 2.4rem;
+
+    border: none;
+    background-color: transparent;
+    align-self: flex-start;
+    padding-right: 2.4rem;
+    padding-top: 0;
+
+    word-spacing: -0.3rem;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+
+    border: none;
+    background-color: black;
+    color: white;
+
+    font-size: 1.8rem;
+
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+}
+
+#result:hover {
+    background-color: #21b1ff;
+    color: black;
+}
+
+.numeric-keypad {
+    grid-area: num;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.numeric-keypad .btn {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.basic-operations-keypad {
+    grid-area: bas;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.basic-operations-keypad .btn {
+    margin-bottom: 10px;
+}
+
+.constants {
+    grid-area: cons;
+    display: flex;
+    justify-content: center;
+}
+
+.constants .btn {
+    margin-right: 5px;
+}
+
+.intermediate-operations {
+    grid-area: inter;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intermediate-operations .btn {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.advanced-operations-keypad {
+    grid-area: adv;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.advanced-operations-keypad .btn {
+    margin-bottom: 10px;
+}
+
+.bg-color {
+    background-color: #21b1ff;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        width: 33rem;
+        height: 45rem;
+        padding: 10px;
+
+        grid-template: repeat(4, 45px) / 45px 1fr 45px;
+        grid-template-areas:
+            "display display display"
+            "adv cons bas"
+            "adv inter bas"
+            "adv inter bas"
+            "adv num bas";
+    }
+
+    .display {
+        width: 100%;
+        font-size: 2.4rem;
+    }
+
+    #display-2 {
+        margin: 0.4rem auto;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}

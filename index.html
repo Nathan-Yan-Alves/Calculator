@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./scripts/script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <input
+                type="text"
+                name="display-2"
+                id="display-2"
+                class="display"
+                disabled
+            />
+            <input
+                type="text"
+                name="display"
+                id="display-1"
+                class="display"
+                disabled
+                placeholder="0"
+            />
+            <div class="numeric-keypad">
+                <button class="btn" value="1">1</button>
+                <button class="btn" value="2">2</button>
+                <button class="btn" value="3">3</button>
+                <button class="btn" value="4">4</button>
+                <button class="btn" value="5">5</button>
+                <button class="btn" value="6">6</button>
+                <button class="btn" value="7">7</button>
+                <button class="btn" value="8">8</button>
+                <button class="btn" value="9">9</button>
+                <button class="btn" value="+/-">+/-</button>
+                <button class="btn" value="0">0</button>
+                <button class="btn" value=".">.</button>
+            </div>
+            <div class="basic-operations-keypad">
+                <button class="btn">C</button>
+                <button class="btn">+</button>
+                <button class="btn">-</button>
+                <button class="btn">*</button>
+                <button class="btn">/</button>
+                <button class="btn" id="result">=</button>
+            </div>
+            <div class="constants">
+                <button class="btn">&#960;</button>
+                <button class="btn" style="opacity: 0" disabled></button>
+                <button class="btn" style="opacity: 0" disabled></button>
+                <button class="btn">&#8455;</button>
+            </div>
+            <div class="intermediate-operations">
+                <button class="btn">x!</button>
+                <button class="btn">Exp</button>
+                <button class="btn">|x|</button>
+                <button class="btn">Mod</button>
+                <button class="btn"><sup>1</sup>/<sub>x</sub></button>
+                <button class="btn">Sin</button>
+                <button class="btn">Cos</button>
+                <button class="btn">Tan</button>
+            </div>
+            <div class="advanced-operations-keypad">
+                <button class="btn" id="changeBtn">2<sup>nd</sup></button>
+                <div class="firstList">
+                    <button class="btn">x<sup>2</sup></button>
+                    <button class="btn">Log</button>
+                    <button class="btn"><sup>2</sup>&#8730;x</button>
+                    <button class="btn">x<sup>y</sup></button>
+                    <button class="btn">10<sup>x</sup></button>
+                </div>
+                <div class="secondList hidden">
+                    <button class="btn">Ln</button>
+                    <button class="btn">2<sup>x</sup></button>
+                    <button class="btn"><sup>y</sup>&#8730;x</button>
+                    <button class="btn">&#8455;<sup>x</sup></button>
+                    <button class="btn">Log<sub>y</sub>x</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
